@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcos 11:23: La fe que mueve montañas | Vivos para Servir</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <script src="https://cdn.counter.dev/script.js" data-id="c6f88d07-4d8a-4bbf-80a9-cc94b1592197" data-utcoffset="-5"></script>
+   <style>
+        :root {
+            --primary: #2c5e8f;
+            --primary-dark: #1e3f63;
+            --secondary: #e8b034;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --font-heading: 'Georgia', serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-main);
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: #fefefe;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-icon {
+            font-size: 2rem;
+            color: var(--secondary);
+        }
+        
+        .logo-text h1 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            margin-bottom: 3px;
+        }
+        
+        .logo-text p {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+        
+        .back-button {
+            color: white;
+            font-weight: 600;
+            padding: 8px 20px;
+            border-radius: 5px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        .back-button:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+        
+        /* Article Header */
+        .article-header {
+            background: linear-gradient(rgba(44, 94, 143, 0.9), rgba(30, 63, 99, 0.95)), url('https://images.unsplash.com/photo-1511377107391-116a9d5c6d6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0 60px;
+            margin-bottom: 40px;
+        }
+        
+        .article-title {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .article-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            background-color: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        .author-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+        
+        .article-date {
+            font-style: italic;
+            opacity: 0.9;
+        }
+        
+        .bible-verse {
+            font-size: 1.5rem;
+            font-style: italic;
+            text-align: center;
+            padding: 25px;
+            background-color: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            border-left: 5px solid var(--secondary);
+            margin-top: 20px;
+        }
+        
+        /* Article Content */
+        .article-container {
+            display: flex;
+            gap: 40px;
+            padding-bottom: 60px;
+        }
+        
+        .article-content {
+            flex: 2.5;
+        }
+        
+        .article-sidebar {
+            flex: 1;
+        }
+        
+        .article-section {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .article-section:last-of-type {
+            border-bottom: none;
+        }
+        
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary);
+        }
+        
+        .section-subtitle {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin: 25px 0 15px;
+        }
+        
+        .article-body {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .article-body p {
+            margin-bottom: 20px;
+        }
+        
+        .article-body blockquote {
+            border-left: 4px solid var(--primary);
+            padding-left: 20px;
+            margin: 25px 0;
+            font-style: italic;
+            color: var(--primary-dark);
+            background-color: rgba(44, 94, 143, 0.05);
+            padding: 20px;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .highlight-box {
+            background-color: rgba(232, 176, 52, 0.1);
+            border-left: 4px solid var(--secondary);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .comparison-table th {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .comparison-table td {
+            padding: 15px;
+            border-bottom: 1px solid var(--light-gray);
+            vertical-align: top;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: rgba(44, 94, 143, 0.05);
+        }
+        
+        .comparison-table tr:hover {
+            background-color: rgba(44, 94, 143, 0.1);
+        }
+        
+        .reflection-box {
+            background-color: rgba(30, 63, 99, 0.08);
+            border-radius: 10px;
+            padding: 30px;
+            margin: 40px 0;
+            border-left: 5px solid var(--primary);
+        }
+        
+        .reflection-title {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+        }
+        
+        .reflection-list {
+            padding-left: 20px;
+        }
+        
+        .reflection-list li {
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+        
+        /* Mountain Symbol */
+        .mountain-symbol {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .mountain-icon {
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .mountain-text {
+            font-style: italic;
+            color: var(--primary);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Sidebar */
+        .sidebar-widget {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 100px;
+        }
+        
+        .widget-title {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light-gray);
+        }
+        
+        .author-bio {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .author-bio-img {
+            width: 120px;
+            height: 120px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .series-info {
+            background-color: rgba(232, 176, 52, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .series-info h4 {
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .series-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .series-list li {
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(232, 176, 52, 0.3);
+        }
+        
+        .series-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .series-list a {
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .series-list a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+        
+        .contact-widget {
+            background-color: rgba(44, 94, 143, 0.05);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .contact-button {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+        
+        .contact-button:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .related-posts {
+            list-style: none;
+        }
+        
+        .related-post {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .related-post:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .related-post-img {
+            width: 80px;
+            height: 80px;
+            background-color: var(--light-gray);
+            border-radius: 5px;
+            flex-shrink: 0;
+        }
+        
+        .related-post-title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+        
+        .related-post-author {
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo h3 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 50px;
+        }
+        
+        .footer-links h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .article-container {
+                flex-direction: column;
+            }
+            
+            .article-header {
+                padding: 60px 0 40px;
+            }
+            
+            .article-title {
+                font-size: 2.2rem;
+            }
+            
+            .sidebar-widget {
+                position: static;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .footer-links {
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .article-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+            
+            .article-title {
+                font-size: 1.8rem;
+            }
+            
+            .bible-verse {
+                font-size: 1.2rem;
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .mountain-icon {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-cross"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Vivos para Servir</h1>
+                    <p>Ministerio Cristiano - Educación y Teología</p>
+                </div>
+            </a>
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Volver al Blog
+            </a>
+        </div>
+    </header>
+
+    <!-- Article Header -->
+    <div class="article-header">
+        <div class="container">
+            <h1 class="article-title">Marcos 11:23: La fe que mueve montañas</h1>
+            <div class="article-meta">
+                <div class="article-author">
+                    <div class="author-avatar">YD</div>
+                    <div class="author-info">
+                        <h3>Yurleidy Domínguez Vega</h3>
+                        <p>Licenciado en Teología y estudios bíblicos</p>
+                    </div>
+                </div>
+                <div class="article-date">6 de julio, 2023 • 15 min de lectura</div>
+            </div>
+            <div class="bible-verse">
+                "Porque de cierto os digo que cualquiera que dijere a este monte: Quítate y échate en el mar, y no dudare en su corazón, sino creyere que será hecho lo que dice, lo que diga le será hecho" (Marcos 11:23, RVR1960).
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <div class="container article-container">
+        <!-- Main Article -->
+        <article class="article-content">
+            <!-- Introduction -->
+            <section class="article-section">
+                <h2 class="section-title">Introducción: El texto más malentendido sobre la fe</h2>
+                <div class="article-body">
+                    <p>Este versículo se ha convertido en el caballo de batalla de un movimiento que promete a los creyentes poder "decretar" su realidad mediante declaraciones de fe. Pero ¿es esto lo que Jesús realmente enseñó? Un examen cuidadoso del contexto, lenguaje y mensaje global de Marcos revela un significado más profundo y radicalmente diferente.</p>
+                    
+                    <p>La interpretación popular sugiere que tenemos poder en nuestras palabras para mover cualquier "montaña" de problemas en nuestra vida. Sin embargo, una exégesis rigurosa muestra que Jesús estaba enseñando algo mucho más específico y teológicamente rico.</p>
+                    
+                    <div class="mountain-symbol">
+                        <div class="mountain-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="mountain-text">
+                            "Este monte" no es cualquier obstáculo personal, sino un símbolo específico en el contexto del ministerio de Jesús.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Part I -->
+            <section class="article-section">
+                <h2 class="section-title">I. El contexto olvidado: La higuera, el templo y la fe</h2>
+                
+                <div class="article-body">
+                    <h3 class="section-subtitle">Una historia de tres partes</h3>
+                    
+                    <p>Marcos 11:23 no es una declaración aislada. Forma parte de una secuencia narrativa cuidadosamente estructurada:</p>
+                    
+                    <div class="highlight-box">
+                        <p><strong>1. La maldición de la higuera estéril (11:12-14)</strong><br>
+                        Jesús busca fruto en una higuera, no lo encuentra, y declara: "Nunca jamás coma nadie fruto de ti". No es un berrinche divino, sino <strong>una parábola viviente</strong>.</p>
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <p><strong>2. La purificación del templo (11:15-19)</strong><br>
+                        Jesús expulsa a los comerciantes, acusando: "¿No está escrito: Mi casa será llamada casa de oración para todas las naciones? Mas vosotros la habéis hecho cueva de ladrones".</p>
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <p><strong>3. La higuera seca y la enseñanza (11:20-26)</strong><br>
+                        Al ver la higuera seca, Jesús enseña sobre la fe que "mueve montañas".</p>
+                    </div>
+                    
+                    <h3 class="section-subtitle">El vínculo teológico</h3>
+                    
+                    <p>La higuera y el templo están <strong>simbólicamente conectados</strong>:</p>
+                    
+                    <ul style="margin-left: 30px; margin-bottom: 20px;">
+                        <li><strong>Ambos muestran apariencia sin sustancia</strong>: hojas sin fruto, ritual sin justicia</li>
+                        <li><strong>Ambos reciben juicio por su esterilidad espiritual</strong></li>
+                        <li><strong>La fe que "mueve montañas" se entiende en este contexto de confrontación con sistemas religiosos vacíos</strong></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Part II -->
+            <section class="article-section">
+                <h2 class="section-title">II. Análisis exegético: Lo que realmente dice el texto</h2>
+                
+                <div class="article-body">
+                    <h3 class="section-subtitle">"Este monte" no es cualquier monte</h3>
+                    
+                    <p>La frase griega <strong>τῷ ὄρει τούτῳ</strong> ("a este monte") contiene un demostrativo clave: <strong>τούτῳ</strong> ("este"). Jesús no habla de montañas en general, sino de <strong>un monte específico en su contexto inmediato</strong>.</p>
+                    
+                    <p>¿Cuál es "este monte"?</p>
+                    
+                    <ul style="margin-left: 30px; margin-bottom: 20px;">
+                        <li><strong>El Monte del Templo</strong>, recién purificado por Jesús</li>
+                        <li><strong>El Monte de los Olivos</strong>, donde están hablando</li>
+                        <li><strong>El sistema religioso judío</strong> representado por el templo corrupto</li>
+                    </ul>
+                    
+                    <p>En la tradición judía, "mover montañas" era una <strong>metáfora rabínica</strong> para hacer lo imposible (Talmud, Sanedrín 24a). Jesús la usa para hablar de <strong>fe que enfrenta obstáculos aparentemente inamovibles</strong>.</p>
+                    
+                    <h3 class="section-subtitle">La fe que no duda "en el corazón"</h3>
+                    
+                    <p>El término <strong>διακρίνω</strong> ("dudar") significa literalmente "separar, juzgar entre". En este contexto, se refiere a:</p>
+                    
+                    <ul style="margin-left: 30px; margin-bottom: 20px;">
+                        <li><strong>División interna</strong> entre lo que se dice y lo que se cree realmente</li>
+                        <li><strong>Vacilación</strong> que niega en la práctica lo que se afirma con palabras</li>
+                        <li><strong>Incoherencia</strong> entre profesión de fe y realidad del corazón</li>
+                    </ul>
+                    
+                    <h3 class="section-subtitle">La conexión con la oración (versículo 24)</h3>
+                    
+                    <p>Jesús inmediatamente aclara: <em>"Por tanto, os digo que todo lo que pidiereis orando, creed que lo recibiréis, y os vendrá"</em> (v. 24).</p>
+                    
+                    <p>Tres elementos cruciales:</p>
+                    
+                    <ol style="margin-left: 30px; margin-bottom: 20px;">
+                        <li><strong>"Pidiereis orando"</strong>: Se trata de <strong>oración</strong>, no de declaraciones autónomas</li>
+                        <li><strong>"Creer que lo recibiréis"</strong>: Fe en <strong>Dios que responde</strong>, no en el poder de las palabras</li>
+                        <li>Los versículos 25-26 añaden la condición del <strong>perdón</strong>, enfatizando la <strong>relación con Dios y con otros</strong></li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Part III -->
+            <section class="article-section">
+                <h2 class="section-title">III. La interpretación de la "Confesión Positiva": Un análisis crítico</h2>
+                
+                <div class="article-body">
+                    <h3 class="section-subtitle">¿Qué enseña este movimiento?</h3>
+                    
+                    <p>La "Confesión Positiva" (también llamada "Palabra de Fe" o "Evangelio de la Prosperidad") utiliza Marcos 11:23 para afirmar que:</p>
+                    
+                    <ul style="margin-left: 30px; margin-bottom: 20px;">
+                        <li>Los creyentes pueden <strong>"decretar" realidades</strong> hablando a las circunstancias</li>
+                        <li>Las palabras tienen <strong>poder creador inherente</strong></li>
+                        <li>Los "montes" son <strong>cualquier problema</strong>: enfermedad, deudas, obstáculos personales</li>
+                        <li>Si el monte no se mueve, es por <strong>duda o declaraciones negativas</strong> del creyente</li>
+                    </ul>
+                    
+                    <h3 class="section-subtitle">Cuatro errores exegéticos fundamentales</h3>
+                    
+                    <div class="highlight-box">
+                        <p><strong>1. Ignoran el contexto narrativo</strong><br>
+                        Separan el versículo de la historia de la higuera y la purificación del templo, perdiendo el significado original.</p>
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <p><strong>2. Olvidan el demostrativo "este"</strong><br>
+                        Convierten "este monte" (específico, contextual) en "cualquier monte" (genérico, aplicable a cualquier problema personal).</p>
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <p><strong>3. Confunden metáfora con literalidad</strong><br>
+                        Toman "mover montañas" como literal en lugar de reconocerlo como <strong>metáfora judía para lo imposible</strong>.</p>
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <p><strong>4. Invierten el sujeto de la fe</strong><br>
+                        <strong>Texto bíblico</strong>: Fe en que <strong>Dios hará</strong><br>
+                        <strong>Confesión Positiva</strong>: Fe en que <strong>mis palabras harán</strong></p>
+                    </div>
+                    
+                    <h3 class="section-subtitle">Consecuencias teológicas peligrosas</h3>
+                    
+                    <p>Esta interpretación conduce a:</p>
+                    
+                    <ul style="margin-left: 30px; margin-bottom: 20px;">
+                        <li><strong>Magia verbal cristianizada</strong>: La fe se reduce a técnica para manipular la realidad</li>
+                        <li><strong>Culpabilización tóxica</strong>: Si las circunstancias no cambian, la culpa es del creyente por "dudar"</li>
+                        <li><strong>Negación de la soberanía divina</strong>: Dios debe responder a fórmulas, no actuar según su voluntad</li>
+                        <li><strong>Fe narcisista</strong>: Centrada en mis necesidades, no en el reino de Dios</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Part IV -->
+            <section class="article-section">
+                <h2 class="section-title">IV. La fe que realmente "mueve montañas"</h2>
+                
+                <div class="article-body">
+                    <h3 class="section-subtitle">Lo que SÍ enseña Marcos 11:23</h3>
+                    
+                    <ul style="margin-left: 30px; margin-bottom: 20px;">
+                        <li><strong>Dios responde a la fe genuina e integra</strong> (sin doblez interna)</li>
+                        <li><strong>Los obstáculos aparentemente inamovibles pueden ser superados por la fe</strong></li>
+                        <li><strong>La fe auténtica se ejerce en oración</strong>, no en declaraciones autónomas</li>
+                        <li><strong>La relación con Dios y con otros es esencial</strong> (condición del perdón)</li>
+                    </ul>
+                    
+                    <h3 class="section-subtitle">Lo que NO enseña Marcos 11:23</h3>
+                    
+                    <ul style="margin-left: 30px; margin-bottom: 20px;">
+                        <li>Que los creyentes puedan "decretar" realidades a su antojo</li>
+                        <li>Que las palabras tengan poder creador independiente de Dios</li>
+                        <li>Que la fe sea garantía de obtener todo lo que queremos</li>
+                        <li>Que los "montes" sean principalmente problemas materiales personales</li>
+                    </ul>
+                    
+                    <h3 class="section-subtitle">"Montes" en el Nuevo Testamento</h3>
+                    
+                    <p>En la perspectiva bíblica, los "montes" que la fe mueve incluyen:</p>
+                    
+                    <ol style="margin-left: 30px; margin-bottom: 20px;">
+                        <li><strong>Sistemas de opresión e injusticia</strong> (como el sistema religioso corrupto del templo)</li>
+                        <li><strong>Obstáculos para la misión</strong> (la expansión del evangelio en territorio hostil)</li>
+                        <li><strong>Fortalezas espirituales</strong> (estructuras de mal arraigadas)</li>
+                        <li><strong>Incredulidad y resistencia al reino de Dios</strong></li>
+                    </ol>
+                    
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Fe Bíblica (Marcos 11:23)</th>
+                                <th>Confesión Positiva</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Fe en <strong>Dios</strong> que actúa</td>
+                                <td>Fe en <strong>palabras</strong> que actúan</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Oración</strong> como diálogo con Dios</td>
+                                <td><strong>Declaraciones</strong> como decretos autónomos</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sumisión</strong> a la voluntad divina</td>
+                                <td><strong>Exigencia</strong> de respuestas divinas</td>
+                            </tr>
+                            <tr>
+                                <td>Enfrenta <strong>obstáculos espirituales</strong></td>
+                                <td>Enfrenta <strong>problemas materiales</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Comunitaria</strong> (plural: "os digo")</td>
+                                <td><strong>Individualista</strong> (mi bendición, mi sanidad)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Part V -->
+            <section class="article-section">
+                <h2 class="section-title">V. Aplicación contemporánea: La fe que Dios honra</h2>
+                
+                <div class="article-body">
+                    <h3 class="section-subtitle">Fe para nuestro contexto</h3>
+                    
+                    <p>La fe que "mueve montañas" hoy podría significar:</p>
+                    
+                    <div class="highlight-box">
+                        <p><strong>Fe para transformar estructuras injustas</strong> en la sociedad, no solo para prosperar dentro de ellas.</p>
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <p><strong>Fe para perseverar en pruebas</strong> sin respuestas inmediatas, confiando en la bondad de Dios aun en el silencio.</p>
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <p><strong>Fe para la misión imposible</strong> en contextos hostiles al evangelio, donde los resultados humanos son escasos pero la fidelidad divina es segura.</p>
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <p><strong>Fe que sostiene cuando Dios dice "no"</strong>, reconociendo que su gracia es suficiente en nuestra debilidad (2 Corintios 12:8-9).</p>
+                    </div>
+                    
+                    <h3 class="section-subtitle">Principios para una fe equilibrada</h3>
+                    
+                    <ol style="margin-left: 30px; margin-bottom: 20px;">
+                        <li><strong>Ora con fe, pero prepárate para cualquier respuesta</strong> de Dios, no solo la que tú prefieres.</li>
+                        <li><strong>Confía en el carácter de Dios</strong>, no en fórmulas verbales o técnicas espirituales.</li>
+                        <li><strong>Recuerda que el sufrimiento tiene propósito</strong> en el plan divino y puede producir carácter y esperanza (Romanos 5:3-5).</li>
+                        <li><strong>Mira el cuadro completo del reino</strong>, no solo tu bienestar personal inmediato.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Conclusion -->
+            <section class="article-section">
+                <h2 class="section-title">Conclusión: Más allá de la fórmula, la relación</h2>
+                
+                <div class="article-body">
+                    <p>Marcos 11:23, correctamente entendido, no es una fórmula mágica para conseguir lo que queremos. Es una invitación a una <strong>fe radical que confía en Dios frente a obstáculos aparentemente inamovibles</strong>.</p>
+                    
+                    <p>La "Confesión Positiva" distorsiona este texto al convertirlo en técnica de autoayuda espiritualizada. Pero la fe bíblica es diferente: es <strong>relación de confianza con un Padre soberano</strong>, no control de la realidad mediante palabras.</p>
+                    
+                    <div class="highlight-box">
+                        <p><strong>La verdadera fe</strong> no busca mover montañas para nuestro beneficio, sino para la gloria de Dios y el avance de su reino. Como escribió Agustín: "Dame lo que mandas, y manda lo que quieras". Esta es la fe que honra a Dios: la que confía tanto en su poder para hacer lo imposible, como en su sabiduría para decidir qué debe ser hecho.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reflection Box -->
+            <div class="reflection-box">
+                <h3 class="reflection-title">Para Reflexionar:</h3>
+                <ul class="reflection-list">
+                    <li>¿En qué áreas de mi vida he tratado la fe como "fórmula" en lugar de relación con Dios?</li>
+                    <li>¿Cómo puedo cultivar una fe que confíe en Dios incluso cuando Él no responde como yo espero?</li>
+                    <li>¿Qué "montes" en mi comunidad necesitan ser enfrentados con fe comunitaria, no solo con declaraciones individuales?</li>
+                    <li>¿Mi enfoque de la oración es de diálogo con Dios o de decreto a Dios?</li>
+                </ul>
+                
+                <p style="margin-top: 25px; font-style: italic;">Este estudio forma parte de nuestra serie sobre la "Confesión Positiva" desde una perspectiva bíblica equilibrada. Para preguntas o comentarios sobre este tema, escríbenos a <strong>vivosparaservir@gmail.com</strong>.</p>
+            </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="article-sidebar">
+            <!-- Author Bio -->
+            <div class="sidebar-widget">
+                <div class="author-bio">
+                    <div class="author-bio-img">YD</div>
+                    <h3 class="widget-title">Sobre el Autor</h3>
+                    <p><strong>Yurleidy Domínguez Vega</strong> es Licenciado en Teología con especialización en estudios del Nuevo Testamento. Con más de 15 años de experiencia en enseñanza bíblica.</p>
+                    <p>Es autor de varios estudios sobre hermenéutica y aplicación contemporánea de las Escrituras.</p>
+                </div>
+            </div>
+
+            <!-- Series Info -->
+            <div class="sidebar-widget">
+                <div class="series-info">
+                    <h4>Serie: Confesión Positiva - Análisis Bíblico</h4>
+                    <p>Este artículo es parte de una serie que examina textos clave usados por el movimiento de la "Confesión Positiva".</p>
+                    <ul class="series-list">
+                        <li><a href="post1-proverbios18.html"><i class="fas fa-book"></i> Proverbios 18:21</a></li>
+                        <li><a href="post2-proverbios6.html"><i class="fas fa-book"></i> Proverbios 6:2</a></li>
+                        <li><a href="post3-mateo18.html"><i class="fas fa-book"></i> Mateo 18: Atar y desatar</a></li>
+                        <li><a href="post5-historia1.html"><i class="fas fa-history"></i> Historia del movimiento (I)</a></li>
+                        <li><a href="post6-historia2.html"><i class="fas fa-history"></i> Historia del movimiento (II)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Related Posts -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">Artículos relacionados</h3>
+                <ul class="related-posts">
+                    <li class="related-post">
+                        <div class="related-post-img" style="background-image: url('https://images.unsplash.com/photo-1542407342318-65b9d6d8c4e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80');"></div>
+                        <div>
+                            <h4 class="related-post-title">Mateo 18: "Atar y desatar" en la tierra y el cielo</h4>
+                            <p class="related-post-author">Rolando Y. Desdín García</p>
+                        </div>
+                    </li>
+                    <li class="related-post">
+                        <div class="related-post-img" style="background-image: url('https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80');"></div>
+                        <div>
+                            <h4 class="related-post-title">Proverbios 18:21: Poder creativo o responsabilidad</h4>
+                            <p class="related-post-author">Yurleidy Domínguez Vega</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Widget -->
+            <div class="sidebar-widget contact-widget">
+                <h3 class="widget-title">¿Preguntas sobre este tema?</h3>
+                <p>Si tienes dudas sobre la interpretación de este pasaje o quieres profundizar más, escríbenos.</p>
+                <a href="mailto:vivosparaservir@gmail.com" class="contact-button">
+                    <i class="fas fa-envelope"></i> Contáctanos
+                </a>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Vivos para Servir</h3>
+                    <p>Educación y teología para la vida cristiana</p>
+                </div>
+                <div class="footer-links">
+                    <div>
+                        <h4>Enlaces</h4>
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="index.html#blog">Blog</a></li>
+                            <li><a href="index.html#about">Nosotros</a></li>
+                            <li><a href="index.html#contact">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Autores</h4>
+                        <ul>
+                            <li><a href="#">Rolando Desdín</a></li>
+                            <li><a href="#">Yurleidy Domínguez</a></li>
+                            <li><a href="#">Leonard Carrera</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Recursos</h4>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-file-pdf"></i> Estudios en PDF</a></li>
+                            <li><a href="#"><i class="fas fa-podcast"></i> Podcast</a></li>
+                            <li><a href="#"><i class="fas fa-video"></i> Videos</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Ministerio "Vivos para Servir". Todos los derechos reservados. Contacto: vivosparaservir@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sticky sidebar behavior
+        window.addEventListener('scroll', function() {
+            const sidebar = document.querySelector('.sidebar-widget');
+            const sidebarRect = sidebar.getBoundingClientRect();
+            const footer = document.querySelector('footer');
+            const footerRect = footer.getBoundingClientRect();
+            
+            if (sidebarRect.bottom >= footerRect.top - 20) {
+                sidebar.style.position = 'absolute';
+                sidebar.style.top = 'auto';
+                sidebar.style.bottom = '20px';
+            } else {
+                sidebar.style.position = 'sticky';
+                sidebar.style.top = '100px';
+                sidebar.style.bottom = 'auto';
+            }
+        });
+    </script>
+</body>
+</html>

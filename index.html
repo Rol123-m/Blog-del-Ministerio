@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivos para Servir - Ministerio Cristiano</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c5e8f;
+            --primary-dark: #1e3f63;
+            --secondary: #e8b034;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --font-heading: 'Georgia', serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #fefefe;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+        }
+        
+        .logo-text h1 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .logo-text p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            font-weight: 600;
+            transition: color 0.3s;
+            font-size: 1.05rem;
+        }
+        
+        nav a:hover {
+            color: var(--secondary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 94, 143, 0.85), rgba(30, 63, 99, 0.9)), url('https://images.unsplash.com/photo-1518834103328-93d45986dce1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--dark);
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            background-color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Main Content */
+        .main-content {
+            display: flex;
+            padding: 60px 0;
+            gap: 40px;
+        }
+        
+        .blog-posts {
+            flex: 2;
+        }
+        
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--primary-dark);
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--secondary);
+        }
+        
+        /* Post Cards */
+        .post-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
+            transition: transform 0.3s;
+        }
+        
+        .post-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .post-image {
+            height: 250px;
+            background-color: var(--light-gray);
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .post-content {
+            padding: 30px;
+        }
+        
+        .post-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .post-author {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .post-date {
+            font-style: italic;
+        }
+        
+        .post-title {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+        
+        .post-excerpt {
+            margin-bottom: 20px;
+            color: var(--dark);
+            line-height: 1.7;
+        }
+        
+        .read-more {
+            display: inline-block;
+            color: var(--primary);
+            font-weight: 600;
+            padding-bottom: 3px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .read-more:hover {
+            border-bottom-color: var(--primary);
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            flex: 1;
+        }
+        
+        .sidebar-widget {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .widget-title {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light-gray);
+        }
+        
+        .authors-list {
+            list-style: none;
+        }
+        
+        .author-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .author-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .author-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .author-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .contact-info {
+            font-size: 0.95rem;
+        }
+        
+        .contact-info p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .contact-info i {
+            color: var(--primary);
+            margin-top: 3px;
+        }
+        
+        .contact-email {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        /* Newsletter */
+        .newsletter-form {
+            margin-top: 15px;
+        }
+        
+        .newsletter-form input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--light-gray);
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-family: inherit;
+        }
+        
+        .newsletter-form button {
+            width: 100%;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .newsletter-form button:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo h3 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 50px;
+        }
+        
+        .footer-links h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .footer-links {
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content nav {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-cross"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Vivos para Servir</h1>
+                    <p>Ministerio Cristiano - Educación y Teología</p>
+                </div>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#about">Nosotros</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Vivos para Servir a Dios y a Nuestro Prójimo</h2>
+            <p>Un espacio de reflexión teológica y crecimiento espiritual donde exploramos las Sagradas Escrituras para aplicar sus enseñanzas en nuestra vida diaria.</p>
+            <a href="#blog" class="cta-button">Explora Nuestros Artículos</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        <!-- Blog Posts Section -->
+        <section class="blog-posts" id="blog">
+            <h2 class="section-title">Artículos Recientes</h2>
+            
+            <!-- Post 1 - Proverbios 18:21 -->
+            <article class="post-card">
+                <div class="post-image" style="background-image: url('https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="post-author">Yurleidy Domínguez Vega</span>
+                        <span class="post-date">15 de junio, 2023</span>
+                    </div>
+                    <h3 class="post-title">Proverbios 18:21: ¿Poder Creativo o Responsabilidad Moral?</h3>
+                    <p class="post-excerpt">Un análisis exegético frente a la interpretación de la "Confesión Positiva". Explorando si este versículo realmente otorga poder creativo a nuestras palabras o si es un llamado a la responsabilidad ética.</p>
+                    <a href="post1-proverbios18.html" class="read-more">Leer artículo completo →</a>
+                </div>
+            </article>
+            
+            <!-- Post 2 - Proverbios 6:2 -->
+            <article class="post-card">
+                <div class="post-image" style="background-image: url('https://images.unsplash.com/photo-1518834103328-93d45986dce1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="post-author">Rolando Y. Desdín García</span>
+                        <span class="post-date">22 de junio, 2023</span>
+                    </div>
+                    <h3 class="post-title">Proverbios 6:2: Atado a las Palabras de tu Boca</h3>
+                    <p class="post-excerpt">Exégesis frente a la "Confesión Positiva". Un análisis del contexto real de este versículo que advierte sobre compromisos imprudentes, no sobre decretos espirituales mágicos.</p>
+                    <a href="post2-proverbios6.html" class="read-more">Leer artículo completo →</a>
+                </div>
+            </article>
+            
+            <!-- Post 3 - Mateo 18: Atar y Desatar -->
+            <article class="post-card">
+                <div class="post-image" style="background-image: url('https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="post-author">Rolando Y. Desdín García</span>
+                        <span class="post-date">29 de junio, 2023</span>
+                    </div>
+                    <h3 class="post-title">Mateo 18: "Todo lo que atares en la tierra será atado en el cielo"</h3>
+                    <p class="post-excerpt">Una interpretación contextual del poder de atar y desatar en la comunidad cristiana, diferenciándolo de la interpretación individualista de la Confesión Positiva.</p>
+                    <a href="post3-mateo18.html" class="read-more">Leer artículo completo →</a>
+                </div>
+            </article>
+            
+            <!-- Post 4 - Marcos 11: Fe que mueve montañas -->
+            <article class="post-card">
+                <div class="post-image" style="background-image: url('https://images.unsplash.com/photo-1511377107391-116a9d5c6d6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="post-author">Yurleidy Domínguez Vega</span>
+                        <span class="post-date">6 de julio, 2023</span>
+                    </div>
+                    <h3 class="post-title">Marcos 11: La fe que mueve montañas ¿Literal o espiritual?</h3>
+                    <p class="post-excerpt">Un estudio detallado sobre el verdadero significado de la fe que puede mover montañas, contrastando la interpretación bíblica con la visión de la Confesión Positiva.</p>
+                    <a href="post4-marcos11.html" class="read-more">Leer artículo completo →</a>
+                </div>
+            </article>
+            
+            <!-- Post 5 - Historia de la Declaración Positiva I -->
+            <article class="post-card">
+                <div class="post-image" style="background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="post-author">Leonard Carrera</span>
+                        <span class="post-date">13 de julio, 2023</span>
+                    </div>
+                    <h3 class="post-title">Historia de la Declaración Positiva: Orígenes y Desarrollo</h3>
+                    <p class="post-excerpt">Primera parte de un análisis histórico sobre el movimiento de la Confesión Positiva, desde sus raíces en el Nuevo Pensamiento hasta su influencia en el cristianismo contemporáneo.</p>
+                    <a href="post5-historia1.html" class="read-more">Leer artículo completo →</a>
+                </div>
+            </article>
+            
+            <!-- Post 6 - Historia de la Declaración Positiva II -->
+            <article class="post-card">
+                <div class="post-image" style="background-image: url('https://images.unsplash.com/photo-1504052434569-70ad4916e007?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="post-author">Leonard Carrera</span>
+                        <span class="post-date">20 de julio, 2023</span>
+                    </div>
+                    <h3 class="post-title">Historia de la Declaración Positiva: Crítica y Respuesta</h3>
+                    <p class="post-excerpt">Segunda parte que analiza las críticas teológicas al movimiento y las respuestas de sus proponentes, evaluando su impacto en la iglesia moderna.</p>
+                    <a href="post6-historia2.html" class="read-more">Leer artículo completo →</a>
+                </div>
+            </article>
+        </section>
+        
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Authors Widget -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">Nuestros Autores</h3>
+                <ul class="authors-list">
+                    <li class="author-item">
+                        <div class="author-icon">RY</div>
+                        <div class="author-info">
+                            <h4>Rolando Y. Desdín García</h4>
+                            <p>Teólogo y pastor con 20 años de ministerio</p>
+                        </div>
+                    </li>
+                    <li class="author-item">
+                        <div class="author-icon">YD</div>
+                        <div class="author-info">
+                            <h4>Yurleidy Domínguez Vega</h4>
+                            <p>Licenciado en Teología y estudios bíblicos</p>
+                        </div>
+                    </li>
+                    <li class="author-item">
+                        <div class="author-icon">LC</div>
+                        <div class="author-info">
+                            <h4>Leonard Carrera</h4>
+                            <p>Estudiante de postgrado en Estudios Bíblicos</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Contact Widget -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">Contacto</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> <span class="contact-email">vivosparaservir@gmail.com</span></p>
+                    <p><i class="fas fa-comment"></i> Escríbenos para preguntas, sugerencias o solicitudes de oración</p>
+                </div>
+            </div>
+            
+            <!-- Newsletter Widget -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">Suscríbete al Blog</h3>
+                <p>Recibe nuestros nuevos artículos directamente en tu correo.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+            
+            <!-- About Widget -->
+            <div class="sidebar-widget" id="about">
+                <h3 class="widget-title">Sobre el Ministerio</h3>
+                <p>"Vivos para Servir" es un ministerio cristiano dedicado a la enseñanza teológica y formación bíblica. Nuestro propósito es equipar a los creyentes para vivir una fe activa que impacte sus comunidades.</p>
+                <p style="margin-top: 15px;">Actualmente estamos desarrollando una serie de estudios sobre la "Confesión Positiva" desde una perspectiva bíblica equilibrada.</p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Vivos para Servir</h3>
+                    <p>Educación y teología para la vida cristiana</p>
+                </div>
+                <div class="footer-links">
+                    <div>
+                        <h4>Enlaces</h4>
+                        <ul>
+                            <li><a href="#home">Inicio</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#about">Nosotros</a></li>
+                            <li><a href="#contact">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Autores</h4>
+                        <ul>
+                            <li><a href="#">Rolando Desdín</a></li>
+                            <li><a href="#">Yurleidy Domínguez</a></li>
+                            <li><a href="#">Leonard Carrera</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Conéctate</h4>
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Ministerio "Vivos para Servir". Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if(window.innerWidth <= 768) {
+                        document.querySelector('nav').style.display = 'none';
+                    }
+                }
+            });
+        });
+        
+        // Newsletter form submission
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            alert(`¡Gracias por suscribirte con el correo: ${email}! Te enviaremos nuestras nuevas publicaciones.`);
+            this.reset();
+        });
+    </script>
+</body>
+</html>

@@ -18,7 +18,7 @@
     <header>
         <div class="container header-content">
             <a href="index.html" class="logo">
-                <img src="https://via.placeholder.com/60x60/FFFFFF/2c5e8f?text=VS" alt="Vivos para Servir" class="logo-img">
+                <img src="mas logos.jpeg" alt="Vivos para Servir" class="logo-img">
                 <div class="logo-text">
                     <h1>Vivos para Servir</h1>
                     <p>Ministerio Cristiano - Educación y Teología</p>
@@ -245,9 +245,9 @@
             <div class="sidebar-widget">
                 <div class="author-bio">
                     <div class="author-bio-img">YD</div>
-                    <h3 class="widget-title">Sobre la Autora</h3>
-                    <p><strong>Yurleidy Domínguez Vega</strong> es Director Académico del ministerio "Vivos para Servir". Pastora de la Iglesia Bautista de Taguasco, CUBACOr, con más de 10 años de experiencia en ministerio.</p>
-                    <p>Especializada en estudios del Antiguo Testamento y su aplicación a la vida contemporánea.</p>
+                    <h3 class="widget-title">Sobre el Autor</h3>
+                    <p><strong>Yurleidy Domínguez Vega</strong> es Director Académico del ministerio "Vivos para Servir". Pastor de la Iglesia Bautista de Taguasco, CUBACOr, con más de 10 años de experiencia en ministerio.</p>
+                    <p>Especializado en estudios del Antiguo Testamento y su aplicación a la vida contemporánea.</p>
                 </div>
             </div>
 
@@ -324,28 +324,114 @@
         </div>
     </footer>
 
-    <script>
-        // Sticky sidebar behavior
-        window.addEventListener('scroll', function() {
-            const sidebar = document.querySelector('.sidebar-widget');
-            if (!sidebar) return;
+   <script>
+    // Manejo de sidebar sticky para múltiples widgets
+    document.addEventListener('DOMContentLoaded', function() {
+        const sidebarWidgets = document.querySelectorAll('.sidebar-widget');
+        const articleSidebar = document.querySelector('.article-sidebar');
+        const footer = document.querySelector('footer');
+        
+        if (!articleSidebar || sidebarWidgets.length === 0) return;
+        
+        let isCalculated = false;
+        let widgetPositions = [];
+        let sidebarTop = 0;
+        let sidebarHeight = 0;
+        let footerTop = 0;
+        
+        function calculatePositions() {
+            sidebarTop = articleSidebar.getBoundingClientRect().top + window.scrollY;
+            sidebarHeight = articleSidebar.offsetHeight;
+            footerTop = footer.getBoundingClientRect().top + window.scrollY;
             
-            const sidebarRect = sidebar.getBoundingClientRect();
-            const footer = document.querySelector('footer');
-            const footerRect = footer.getBoundingClientRect();
+            widgetPositions = [];
+            let cumulativeHeight = 0;
             
-            if (sidebarRect.bottom >= footerRect.top - 20) {
-                sidebar.style.position = 'absolute';
-                sidebar.style.top = 'auto';
-                sidebar.style.bottom = '20px';
-            } else {
-                sidebar.style.position = 'sticky';
-                sidebar.style.top = '100px';
-                sidebar.style.bottom = 'auto';
+            sidebarWidgets.forEach((widget, index) => {
+                const widgetHeight = widget.offsetHeight + 30; // + margin-bottom
+                widgetPositions.push({
+                    element: widget,
+                    top: cumulativeHeight,
+                    bottom: cumulativeHeight + widgetHeight,
+                    height: widgetHeight,
+                    index: index
+                });
+                cumulativeHeight += widgetHeight;
+            });
+            
+            isCalculated = true;
+        }
+        
+        function handleStickyWidgets() {
+            if (!isCalculated) calculatePositions();
+            
+            const scrollY = window.scrollY;
+            const sidebarBottom = sidebarTop + sidebarHeight;
+            const availableHeight = sidebarHeight;
+            
+            // Primero, quitar todas las clases sticky
+            sidebarWidgets.forEach(widget => {
+                widget.classList.remove('sticky', 'sticky-bottom');
+                widget.style.position = '';
+                widget.style.top = '';
+                widget.style.bottom = '';
+                widget.style.width = '';
+            });
+            
+            // Calcular cuántos widgets caben en el viewport
+            let totalStickyHeight = 0;
+            let widgetsToStick = [];
+            
+            for (let i = 0; i < widgetPositions.length; i++) {
+                const widget = widgetPositions[i];
+                totalStickyHeight += widget.height;
+                
+                if (totalStickyHeight <= availableHeight) {
+                    widgetsToStick.push(widget);
+                } else {
+                    break;
+                }
             }
+            
+            // Si estamos cerca del footer, aplicar sticky-bottom al último widget
+            if (scrollY + window.innerHeight >= footerTop - 50) {
+                const lastWidget = widgetPositions[widgetPositions.length - 1];
+                if (lastWidget) {
+                    lastWidget.element.classList.add('sticky-bottom');
+                }
+                return;
+            }
+            
+            // Si el sidebar está visible en la pantalla
+            if (scrollY >= sidebarTop - 100 && scrollY <= sidebarBottom - window.innerHeight) {
+                // Hacer sticky solo a los widgets que caben
+                widgetsToStick.forEach((widget, index) => {
+                    if (index === 0) {
+                        // El primer widget se pega arriba
+                        widget.element.classList.add('sticky');
+                    }
+                });
+            }
+        }
+        
+        // Calcular en load y resize
+        window.addEventListener('load', function() {
+            calculatePositions();
+            handleStickyWidgets();
+            
+            // Recalcular después de que las imágenes se carguen
+            setTimeout(calculatePositions, 500);
+            setTimeout(handleStickyWidgets, 500);
         });
         
-        // Smooth scroll for anchor links
+        window.addEventListener('scroll', handleStickyWidgets);
+        window.addEventListener('resize', function() {
+            isCalculated = false;
+            setTimeout(calculatePositions, 100);
+            setTimeout(handleStickyWidgets, 100);
+        });
+        
+        // Smooth scroll para anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 const targetId = this.getAttribute('href');
@@ -361,6 +447,7 @@
                 }
             });
         });
-    </script>
+    });
+</script>
 </body>
 </html>

@@ -27,6 +27,10 @@ body {
     flex-direction: column;
 }
 
+.icon {
+    width: 60px;
+    height: 60px;
+}
 .container {
     width: 100%;
     max-width: 1200px;
@@ -71,7 +75,7 @@ header {
     height: 60px;
     width: 60px;
     object-fit: contain;
-    filter: brightness(0) invert(1);
+    
 }
 
 .logo-text h1 {
@@ -562,6 +566,8 @@ nav a:hover {
     min-width: 300px;
 }
 
+/* styles.css - Busca esta sección alrededor de la línea 450 */
+
 .sidebar-widget {
     background-color: white;
     border-radius: 15px;
@@ -569,10 +575,29 @@ nav a:hover {
     margin-bottom: 30px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     border: 1px solid var(--light-gray);
-    position: sticky;
-    top: 100px;
-    max-height: calc(100vh - 120px);
+    /* QUITA ESTAS LÍNEAS: */
+    /* position: sticky; */
+    /* top: 100px; */
+    /* max-height: calc(100vh - 120px); */
     overflow-y: auto;
+    /* AÑADE ESTO: */
+    transition: all 0.3s ease;
+}
+
+/* Añade esta nueva clase para widgets sticky */
+.sidebar-widget.sticky {
+    position: fixed;
+    top: 100px;
+    width: 280px; /* Ancho ajustado */
+    z-index: 100;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+}
+
+.sidebar-widget.sticky-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .sidebar-widget::-webkit-scrollbar {

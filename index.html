@@ -3,32 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vivos para Servir - Ministerio Cristiano</title>
-    <link rel="shortcut icon" href="mas logos.jpeg" type="image/x-icon" class="icon">
+    <title>Vivos para Servir - Ministerio Cristiano de Educación y Teología</title>
+    <meta name="description" content="Ministerio cristiano dedicado a la educación teológica bíblica, análisis exegético y formación de discípulos comprometidos.">
+    <meta name="keywords" content="teología, estudio bíblico, educación cristiana, exégesis, ministerio, análisis bíblico">
+    <meta name="author" content="Ministerio Vivos para Servir">
+    
+    <!-- Preconnect para fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fuentes mejoradas -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Icono del sitio -->
+    <link rel="shortcut icon" href="mas logos.jpeg" type="image/x-icon" class="icon">
+    
+    <!-- Hoja de estilos -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Analytics -->
     <script src="https://cdn.counter.dev/script.js" data-id="c6f88d07-4d8a-4bbf-80a9-cc94b1592197" data-utcoffset="-5"></script>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Vivos para Servir - Ministerio Cristiano">
+    <meta property="og:description" content="Educación teológica y análisis bíblico desde una perspectiva reformada.">
+    <meta property="og:image" content="mas logos.jpeg">
+    <meta property="og:url" content="https://vivosparaservir.org">
+    <meta property="og:type" content="website">
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container header-content">
             <a href="index.html" class="logo">
-                <img src="mas logos.jpeg" alt="Vivos para Servir" class="logo-img">
+                <img src="mas logos.jpeg" alt="Vivos para Servir - Ministerio Cristiano" class="logo-img">
                 <div class="logo-text">
                     <h1>Vivos para Servir</h1>
-                    <p>Área Educativa.</p>
+                    <p>Ministerio Cristiano - Educación y Teología</p>
                 </div>
             </a>
-            <button class="mobile-menu-btn">
+            
+            <button class="mobile-menu-btn" aria-label="Menú de navegación">
                 <i class="fas fa-bars"></i>
             </button>
+            
             <nav>
                 <ul>
-                    <li><a href="#home">Inicio</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#about">Nosotros</a></li>
-                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="#home"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="#blog"><i class="fas fa-book-open"></i> Blog Teológico</a></li>
+                    <li><a href="#about"><i class="fas fa-users"></i> Nuestro Equipo</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contacto</a></li>
                 </ul>
             </nav>
         </div>
@@ -38,29 +65,35 @@
     <section class="hero" id="home">
         <div class="container">
             <h2>Vivos para Servir</h2>
-            <p>Un equipo que vive para servir a Dios a través de la predicación del evangelio.</p>
-            <a href="#blog" class="cta-button">Explora Nuestros Artículos</a>
+            <p>Un ministerio cristiano comprometido con la educación teológica, el análisis bíblico riguroso y la formación de discípulos que impacten sus comunidades.</p>
+            <a href="#blog" class="cta-button">
+                <i class="fas fa-book-open"></i> Explorar Artículos
+            </a>
         </div>
     </section>
 
     <!-- Main Content -->
-    <div class="container main-content">
+    <main class="container main-content">
         <!-- Blog Posts Section -->
         <section class="blog-posts" id="blog">
-            <h2 class="section-title">Artículos Recientes</h2>
+            <h2 class="section-title">Artículos Teológicos Recientes</h2>
             
             <!-- Post 1 - Proverbios 18:21 -->
             <article class="post-card">
                 <div class="post-image" style="background-image: url('https://tse4.mm.bing.net/th/id/OIP.cPllH7m7mbZt-2dKgZufPgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3');"></div>
                 <div class="post-content">
                     <div class="post-meta">
-                        <span class="post-author">Yurleidy Domínguez Vega</span>
-                        <span class="post-date">6 de enero, 2026</span>
+                        <span class="post-author">
+                            <i class="fas fa-user-circle"></i> Yurleidy Domínguez Vega
+                        </span>
+                        <span class="post-date">
+                            <i class="far fa-calendar"></i> 15 de junio, 2023
+                        </span>
                     </div>
                     <h3 class="post-title">Proverbios 18:21: ¿Poder Creativo o Responsabilidad Moral?</h3>
-                    <p class="post-excerpt">Un análisis exegético frente a la interpretación de la "Confesión Positiva". Explorando si este versículo realmente otorga poder creativo a nuestras palabras o si es un llamado a la responsabilidad ética.</p>
+                    <p class="post-excerpt">Un análisis exegético profundo que contrasta la interpretación tradicional con la visión de la "Confesión Positiva". Exploramos el significado real de este versículo en su contexto bíblico y su aplicación práctica para la vida cristiana.</p>
                     <a href="post1-proverbios18.html" class="read-more">
-                        Leer artículo completo <i class="fas fa-arrow-right"></i>
+                        Leer análisis completo <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </article>
@@ -70,77 +103,97 @@
                 <div class="post-image" style="background-image: url('https://th.bing.com/th/id/R.c469a2fe0b826336473081b4f7a9954f?rik=tzN5Jc6mptyrUw&pid=ImgRaw&r=0');"></div>
                 <div class="post-content">
                     <div class="post-meta">
-                        <span class="post-author">Rolando Y. Desdín García</span>
-                        <span class="post-date">5 de enero, 2026</span>
+                        <span class="post-author">
+                            <i class="fas fa-user-circle"></i> Rolando Y. Desdín García
+                        </span>
+                        <span class="post-date">
+                            <i class="far fa-calendar"></i> 5 de enero, 2026
+                        </span>
                     </div>
                     <h3 class="post-title">Proverbios 6:2: Atado a las Palabras de tu Boca</h3>
-                    <p class="post-excerpt">Exégesis frente a la "Confesión Positiva". Un análisis del contexto real de este versículo que advierte sobre compromisos imprudentes, no sobre decretos espirituales mágicos.</p>
+                    <p class="post-excerpt">Exégesis contextual de un versículo frecuentemente malinterpretado. Descubre cómo Proverbios advierte sobre compromisos imprudentes, no sobre "decretos espirituales" mágicos.</p>
                     <a href="post2-proverbios6.html" class="read-more">
-                        Leer artículo completo <i class="fas fa-arrow-right"></i>
+                        Leer análisis completo <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </article>
             
-            <!-- Post 3 - Mateo 18: Atar y Desatar -->
+            <!-- Post 3 - Mateo 18 -->
             <article class="post-card">
                 <div class="post-image" style="background-image: url('https://tse2.mm.bing.net/th/id/OIP.dSxBgMDgenu-wEvjONSaaAHaFj?rs=1&pid=ImgDetMain&o=7&rm=3');"></div>
                 <div class="post-content">
                     <div class="post-meta">
-                        <span class="post-author">Rolando Y. Desdín García</span>
-                        <span class="post-date">2 de enero, 2026</span>
+                        <span class="post-author">
+                            <i class="fas fa-user-circle"></i> Rolando Y. Desdín García
+                        </span>
+                        <span class="post-date">
+                            <i class="far fa-calendar"></i> 2 de enero, 2026
+                        </span>
                     </div>
-                    <h3 class="post-title">Mateo 18: "Todo lo que atares en la tierra será atado en el cielo"</h3>
-                    <p class="post-excerpt">Una interpretación contextual del poder de atar y desatar en la comunidad cristiana, diferenciándolo de la interpretación individualista de la Confesión Positiva.</p>
+                    <h3 class="post-title">Mateo 18: Poder de Atar y Desatar en Contexto</h3>
+                    <p class="post-excerpt">Interpretación comunitaria versus individualista. Estudio sobre el significado real de la autoridad eclesial en el Nuevo Testamento.</p>
                     <a href="post3-mateo18.html" class="read-more">
-                        Leer artículo completo <i class="fas fa-arrow-right"></i>
+                        Leer análisis completo <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </article>
             
-            <!-- Post 4 - Marcos 11: Fe que mueve montañas -->
+            <!-- Post 4 - Marcos 11 -->
             <article class="post-card">
                 <div class="post-image" style="background-image: url('https://th.bing.com/th/id/R.0a443f0de58c6c3d0232b26f8f3678d8?rik=otKVZGFOBcNVUQ&pid=ImgRaw&r=0');"></div>
                 <div class="post-content">
                     <div class="post-meta">
-                        <span class="post-author">Yurleidy Domínguez Vega</span>
-                        <span class="post-date">6 de enero, 2026</span>
+                        <span class="post-author">
+                            <i class="fas fa-user-circle"></i> Yurleidy Domínguez Vega
+                        </span>
+                        <span class="post-date">
+                            <i class="far fa-calendar"></i> 6 de enero, 2026
+                        </span>
                     </div>
-                    <h3 class="post-title">Marcos 11: La fe que mueve montañas ¿Literal o espiritual?</h3>
-                    <p class="post-excerpt">Un estudio detallado sobre el verdadero significado de la fe que puede mover montañas, contrastando la interpretación bíblica con la visión de la Confesión Positiva.</p>
+                    <h3 class="post-title">Marcos 11: Fe que Mueve Montañas ¿Literal o Espiritual?</h3>
+                    <p class="post-excerpt">Análisis detallado del discipulado y la fe genuina versus interpretaciones simplistas del "poder de la confesión positiva".</p>
                     <a href="post4-marcos11.html" class="read-more">
-                        Leer artículo completo <i class="fas fa-arrow-right"></i>
+                        Leer análisis completo <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </article>
             
-            <!-- Post 5 - Historia de la Declaración Positiva I -->
+            <!-- Post 5 - Historia de la Confesión Positiva I -->
             <article class="post-card">
                 <div class="post-image" style="background-image: url('https://img.freepik.com/fotos-premium/equipo-historiadores-investigando-biblioteca_910054-477.jpg');"></div>
                 <div class="post-content">
                     <div class="post-meta">
-                        <span class="post-author">Leonard Luis Carrera Castillo</span>
-                        <span class="post-date">5 de enero, 2026</span>
+                        <span class="post-author">
+                            <i class="fas fa-user-circle"></i> Leonard Luis Carrera Castillo
+                        </span>
+                        <span class="post-date">
+                            <i class="far fa-calendar"></i> 5 de enero, 2026
+                        </span>
                     </div>
-                    <h3 class="post-title">Historia de la Declaración Positiva: Orígenes y Desarrollo</h3>
-                    <p class="post-excerpt">Primera parte de un análisis histórico sobre el movimiento de la Confesión Positiva, desde sus raíces en el Nuevo Pensamiento hasta su influencia en el cristianismo contemporáneo.</p>
+                    <h3 class="post-title">Historia de la Confesión Positiva: Orígenes y Desarrollo</h3>
+                    <p class="post-excerpt">Primera parte de un análisis histórico-teológico sobre los orígenes del movimiento y su evolución dentro del cristianismo contemporáneo.</p>
                     <a href="post5-historia1.html" class="read-more">
-                        Leer artículo completo <i class="fas fa-arrow-right"></i>
+                        Leer análisis completo <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </article>
             
-            <!-- Post 6 - Historia de la Declaración Positiva II -->
+            <!-- Post 6 - Historia de la Confesión Positiva II -->
             <article class="post-card">
                 <div class="post-image" style="background-image: url('https://www.chateaudefontainebleau.fr/wp-content/uploads/2019/12/fontainebleau.rec.faire-savoir.com-bibliothaque-de-serlio-chateau-de-fontainebleau-768x512.jpg');"></div>
                 <div class="post-content">
                     <div class="post-meta">
-                        <span class="post-author">Leonard Luis Carrera Castillo</span>
-                        <span class="post-date">17 de enero, 2026</span>
+                        <span class="post-author">
+                            <i class="fas fa-user-circle"></i> Leonard Luis Carrera Castillo
+                        </span>
+                        <span class="post-date">
+                            <i class="far fa-calendar"></i> 17 de enero, 2026
+                        </span>
                     </div>
-                    <h3 class="post-title">Historia de la Declaración Positiva: Crítica y Respuesta</h3>
-                    <p class="post-excerpt">Segunda parte que analiza las críticas teológicas al movimiento y las respuestas de sus proponentes, evaluando su impacto en la iglesia moderna.</p>
+                    <h3 class="post-title">Historia de la Confesión Positiva: Crítica y Respuesta</h3>
+                    <p class="post-excerpt">Segunda parte: evaluación de las críticas teológicas y análisis del impacto del movimiento en la iglesia evangélica moderna.</p>
                     <a href="post6-historia2.html" class="read-more">
-                        Leer artículo completo <i class="fas fa-arrow-right"></i>
+                        Leer análisis completo <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </article>
@@ -150,27 +203,27 @@
         <aside class="sidebar">
             <!-- Authors Widget -->
             <div class="sidebar-widget">
-                <h3 class="widget-title">Nuestros Pastores</h3>
+                <h3 class="widget-title">Nuestro Equipo Pastoral</h3>
                 <ul class="authors-list">
                     <li class="author-item">
                         <div class="author-icon">RY</div>
                         <div class="author-info">
                             <h4>Rolando Y. Desdín García</h4>
-                            <p>Director del ministerio "Vivos para Servir". Pastor de la Iglesia Bautista de Sola, Camagüey, CBCOr.</p>
+                            <p>Director del ministerio "Vivos para Servir". Pastor de la Iglesia Bautista de Sola, Camagüey. Especialista en hermenéutica bíblica y teología sistemática.</p>
                         </div>
                     </li>
                     <li class="author-item">
                         <div class="author-icon">YD</div>
                         <div class="author-info">
                             <h4>Yurleidy Domínguez Vega</h4>
-                            <p>Director Académico del ministerio "Vivos para Servir". Pastor de la Iglesia Bautista de Taguasco, CBCOr.</p>
+                            <p>Director Académico del ministerio. Pastor de la Iglesia Bautista de Taguasco. Especializado en estudios del Antiguo Testamento y exégesis hebrea.</p>
                         </div>
                     </li>
                     <li class="author-item">
                         <div class="author-icon">LC</div>
                         <div class="author-info">
                             <h4>Leonard Luis Carrera Castillo</h4>
-                            <p>Asesor Académico del ministerio "Vivos para Servir". Pastor de la 7ma Iglesia Bautista de Baracoa, CBCOr.</p>
+                            <p>Asesor Académico del ministerio. Pastor de la 7ma Iglesia Bautista de Baracoa. Especialista en historia de la teología y filosofía cristiana.</p>
                         </div>
                     </li>
                 </ul>
@@ -178,28 +231,30 @@
             
             <!-- Contact Widget -->
             <div class="sidebar-widget">
-                <h3 class="widget-title">Contacto</h3>
-                <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> <span class="contact-email">vivosparaservir@gmail.com</span></p>
-                    <p><i class="fas fa-comment"></i> Escríbenos para preguntas, sugerencias, donaciones o solicitudes de oración</p>
-                </div>
+                <h3 class="widget-title">¿Preguntas o Comentarios?</h3>
+                <p>Estamos disponibles para responder tus inquietudes teológicas, recibir sugerencias o coordinar estudios bíblicos. No dudes en contactarnos.</p>
                 <a href="mailto:vivosparaservir@gmail.com" class="contact-button">
-                    <i class="fas fa-envelope"></i> Contáctanos
+                    <i class="fas fa-envelope"></i> Contactar por Email
                 </a>
             </div>
             
             <!-- About Widget -->
             <div class="sidebar-widget" id="about">
-                <h3 class="widget-title">Sobre el Ministerio</h3>
-                <p>"Vivos para Servir" es un ministerio cristiano con el propósito de formar equipos que vivan para servir a Dios a través de la predicación del evangelio. Nuestro propósito es equipar a los creyentes para vivir una fe activa que impacte sus comunidades.</p>
-                <div class="highlight-box">
-                    <p>Actualmente estamos desarrollando una 
-                        serie de estudios sobre la "Confesión Positiva" 
-                        desde una perspectiva bíblica equilibrada.</p>
+                <h3 class="widget-title">Sobre Nuestro Ministerio</h3>
+                <p><strong>Vivos para Servir</strong> es un ministerio cristiano comprometido con:</p>
+                <ul class="reflection-list">
+                    <li>Educación teológica accesible y rigurosa</li>
+                    <li>Análisis exegético contextual de las Escrituras</li>
+                    <li>Formación de discípulos comprometidos</li>
+                    <li>Servicio comunitario basado en el evangelio</li>
+                    <li>Defensa de la sana doctrina reformada</li>
+                </ul>
+                <div class="highlight-box" style="margin-top: 20px;">
+                    <p><strong>Enfoque actual:</strong> Serie de estudios críticos sobre el movimiento de la "Confesión Positiva" desde una perspectiva bíblica reformada.</p>
                 </div>
             </div>
         </aside>
-    </div>
+    </main>
 
     <!-- Footer -->
     <footer id="contact">
@@ -207,79 +262,131 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <h3>Vivos para Servir</h3>
-                    <p>Educación y teología para la vida cristiana. Ministerio comprometido con la enseñanza bíblica fiel y el servicio comunitario.</p>
+                    <p>Ministerio cristiano dedicado a la educación teológica, análisis bíblico riguroso y formación de discípulos que vivan para servir a Dios y a su prójimo.</p>
                 </div>
                 <div class="footer-links">
                     <div>
-                        <h4>Enlaces</h4>
+                        <h4>Navegación</h4>
                         <ul>
-                            <li><a href="#home">Inicio</a></li>
-                            <li><a href="#blog">Blog</a></li>
-                            <li><a href="#about">Nosotros</a></li>
-                            <li><a href="#contact">Contacto</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4>Pastores</h4>
-                        <ul>
-                            <li><a href="#">Rolando Desdín García</a></li>
-                            <li><a href="#">Yurleidy Domínguez Vega</a></li>
-                            <li><a href="#">Leonard Carrera</a></li>
+                            <li><a href="#home"><i class="fas fa-home"></i> Inicio</a></li>
+                            <li><a href="#blog"><i class="fas fa-book-open"></i> Blog Teológico</a></li>
+                            <li><a href="#about"><i class="fas fa-users"></i> Nuestro Equipo</a></li>
+                            <li><a href="#contact"><i class="fas fa-envelope"></i> Contacto</a></li>
                         </ul>
                     </div>
                     <div>
                         <h4>Recursos</h4>
                         <ul>
-                            <li><a href="#"><i class="fas fa-file-pdf"></i> Revista Teológica del Ministerio</a></li>
-                            <li><a href="#"><i class="fas fa-book"></i> Curso de Griego</a></li>
+                            <li><a href="#"><i class="fas fa-file-pdf"></i> Revista Teológica</a></li>
+                            <li><a href="#"><i class="fas fa-graduation-cap"></i> Cursos Online</a></li>
+                            <li><a href="#"><i class="fas fa-search"></i> Estudios Exegéticos</a></li>
+                            <li><a href="#"><i class="fas fa-pray"></i> Devocionales Diarios</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Conéctate</h4>
+                        <ul>
+                            <li><a href="mailto:vivosparaservir@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+                            <li><a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                            <li><a href="#"><i class="fas fa-donate"></i> Apoyar el Ministerio</a></li>
+                            <li><a href="#"><i class="fas fa-praying-hands"></i> Solicitar Oración</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2026 Ministerio "Vivos para Servir". Todos los derechos reservados.</p>
-                <p>Contacto: vivosparaservir@gmail.com</p>
+                <p>&copy; 2026 Ministerio Cristiano "Vivos para Servir". Todos los derechos reservados.</p>
+                <p>Contacto principal: <strong>vivosparaservir@gmail.com</strong> | Comprometidos con la sana doctrina y el servicio cristiano.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
             const nav = document.querySelector('nav');
-            nav.classList.toggle('active');
-        });
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(e) {
-            const nav = document.querySelector('nav');
-            const menuBtn = document.querySelector('.mobile-menu-btn');
             
-            if (!nav.contains(e.target) && !menuBtn.contains(e.target)) {
-                nav.classList.remove('active');
-            }
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
+            if (mobileMenuBtn && nav) {
+                mobileMenuBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    nav.classList.toggle('active');
+                    this.setAttribute('aria-expanded', nav.classList.contains('active'));
+                    this.innerHTML = nav.classList.contains('active') ? 
+                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
                 
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    e.preventDefault();
-                    
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    if(window.innerWidth <= 768) {
-                        document.querySelector('nav').classList.remove('active');
+                // Close menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!nav.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                        nav.classList.remove('active');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
                     }
-                }
+                });
+                
+                // Close menu when clicking a link
+                nav.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        nav.classList.remove('active');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    });
+                });
+            }
+            
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    
+                    if (href === '#' || href === '#!') return;
+                    
+                    const targetElement = document.querySelector(href);
+                    
+                    if (targetElement) {
+                        e.preventDefault();
+                        
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Update URL without scrolling
+                        history.pushState(null, null, href);
+                    }
+                });
+            });
+            
+            // Add animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe post cards
+            document.querySelectorAll('.post-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+            
+            // Observe sidebar widgets
+            document.querySelectorAll('.sidebar-widget').forEach(widget => {
+                widget.style.opacity = '0';
+                widget.style.transform = 'translateY(30px)';
+                widget.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(widget);
             });
         });
     </script>

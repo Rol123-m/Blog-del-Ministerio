@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /google9dafd3f42d01bf29.html
+
+Sitemap: https://https://rol123-m.github.io/Blog-del-Ministerio//sitemap.xml
